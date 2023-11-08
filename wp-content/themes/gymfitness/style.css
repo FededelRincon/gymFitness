@@ -77,20 +77,27 @@ img {
     max-width: 100%;
     height: auto;
 }
+.imagen-destacada {
+    margin-bottom: 3rem;
+}
 
 .contenedor {
     width: min(95%, 120rem);
     margin: 0 auto;
+}
+.contenido-centrado {
+    width: min(95%, 80rem);
+
 }
 
 /* Utilidades */
 .text-center {
     text-align: center;
 }
-.texto-primario {
+.text-primario {
     color: var(--primario)
 }
-.texto-blanco {
+.text-blanco {
     color: var(--blanco);
 }
 .seccion {
