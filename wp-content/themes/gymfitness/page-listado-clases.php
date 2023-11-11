@@ -6,6 +6,9 @@
 ?>
 
     <main class="contenedor seccion">
+        <?php
+            get_template_part('template-parts/pagina');
+        ?>
         <ul class="listado-grid">
             <?php
                 $args = array(
@@ -20,19 +23,21 @@
 
                     <li class="card">
                         <?php the_post_thumbnail() ?>
-                        <!-- deberia poner este permalink para que envuelva la foto de thumbnail -->
-                        <a href="<?php the_permalink()?>">
-                            <h3><?php the_title() ?></h3>
-                        </a>
-
-                        <?php
-                            $hora_inicio = get_field('hora_inicio');
-                            $hora_fin = get_field('hora_fin');
-                        ?>
-                        <p>
-                            <?php the_field('dias_clase'); ?> - 
-                            <?php echo $hora_inicio . " a " . $hora_fin; ?>
-                        </p>
+                        <div class="contenido">
+                            <!-- deberia poner este permalink para que envuelva la foto de thumbnail -->
+                            <a href="<?php the_permalink()?>">
+                                <h3><?php the_title() ?></h3>
+                            </a>
+    
+                            <?php
+                                $hora_inicio = get_field('hora_inicio');
+                                $hora_fin = get_field('hora_fin');
+                            ?>
+                            <p>
+                                <?php the_field('dias_clase'); ?> - 
+                                <?php echo $hora_inicio . " a " . $hora_fin; ?>
+                            </p>
+                        </div>
                     </li>
 
                     <?php
