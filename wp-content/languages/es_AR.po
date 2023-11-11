@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 6.4.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-11-01 23:28:51+0000\n"
+"PO-Revision-Date: 2023-11-11 05:37:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -309,10 +309,24 @@ msgctxt "block keyword"
 msgid "accordion"
 msgstr "acordeón"
 
+#: wp-includes/blocks/details/block.json
+msgctxt "block keyword"
+msgid "toggle"
+msgstr "alternar"
+
+#: wp-includes/blocks/post-date/block.json
+msgctxt "block description"
+msgid "Display the publish date for an entry such as a post or page."
+msgstr "Mostrar la fecha de publicación de una entrada, sea entrada o página."
+
 #: wp-includes/js/dist/edit-site.js:36176
 #: wp-admin/includes/class-wp-posts-list-table.php:1562
 msgid "Export as JSON"
 msgstr "Exportar como JSON"
+
+#: wp-includes/js/dist/edit-site.js:26939 wp-admin/menu.php:67
+msgid "Library"
+msgstr "Biblioteca"
 
 #: wp-includes/update.php:1125
 #: wp-admin/includes/class-wp-automatic-updater.php:465
@@ -605,6 +619,10 @@ msgstr "Lo siento, no tenés permisos para crear menús de navegación con este 
 #: wp-includes/rest-api/endpoints/class-wp-rest-global-styles-revisions-controller.php:435
 msgid "Sorry, you are not allowed to view revisions for this global style."
 msgstr "Lo siento, no tenés permisos para ver revisiones de este estilo global."
+
+#: wp-includes/post.php:287 wp-includes/post.php:288
+msgid "Add New Pattern"
+msgstr "Agregar patrón nuevo"
 
 #: wp-includes/media-template.php:379
 msgid "The Edit Media screen is deprecated as of WordPress 6.3. Please use the Media Library instead."
@@ -903,7 +921,7 @@ msgid "Sorry, replies to unapproved comments are not allowed."
 msgstr "Lo siento, las respuestas a comentarios sin aprobar no están permitidas."
 
 #. translators: %s: A list of placeholders found to be a problem.
-#: wp-includes/class-wpdb.php:1647
+#: wp-includes/class-wpdb.php:1662
 msgid "Arguments cannot be prepared as both an Identifier and Value. Found the following conflicts: %s"
 msgstr "Los argumentos no pueden prepararse como identificador y valor a la vez. Se encontraron los siguientes conflictos: %s"
 
@@ -1555,11 +1573,11 @@ msgid "Need more help? <a href=\"%1$s\">Read the support article on %2$s</a>."
 msgstr "¿Necesitás más ayuda? <a href=\"%1$s\">Leé el artículo de soporte sobre %2$s</a>."
 
 #. translators: %s: Database name.
-#: wp-includes/class-wpdb.php:1199
+#: wp-includes/class-wpdb.php:1214
 msgid "The database server could be connected to (which means your username and password is okay) but the %s database could not be selected."
 msgstr "El servidor de la base de datos podría estar conectado (lo que significa que tu nombre de usuario y contraseña están bien) pero la base de datos %s no puede ser seleccionada."
 
-#: wp-includes/class-wpdb.php:1195
+#: wp-includes/class-wpdb.php:1210
 msgid "Cannot select database"
 msgstr "No se puede seleccionar la base de datos"
 
@@ -1946,25 +1964,25 @@ msgstr "No hay comentarios."
 msgid "Confirm"
 msgstr "Confirmar"
 
-#: wp-includes/class-wpdb.php:3670
+#: wp-includes/class-wpdb.php:3685
 msgid "Could not strip invalid text."
 msgstr "No se pudo eliminar el texto no válido."
 
-#: wp-includes/class-wpdb.php:3217
+#: wp-includes/class-wpdb.php:3232
 msgid "Could not retrieve table charset."
 msgstr "No se pudo recuperar la tabla de caracteres."
 
 #. translators: %s: Database fields where the error occurred.
-#: wp-includes/class-wpdb.php:2833
+#: wp-includes/class-wpdb.php:2848
 msgid "WordPress database error: Processing the values for the following fields failed: %s. The supplied values may be too long or contain invalid data."
 msgstr "Error en la base de datos de WordPress: falló el procesamiento de los valores de los siguientes campos: %s. Los valores ingresados pueden ser demasiado largos o contener datos no válidos."
 
 #. translators: %s: Database field where the error occurred.
-#: wp-includes/class-wpdb.php:2827
+#: wp-includes/class-wpdb.php:2842
 msgid "WordPress database error: Processing the value for the following field failed: %s. The supplied value may be too long or contains invalid data."
 msgstr "Error en la base de datos de WordPress: Falló el procesamiento del valor del siguiente campo: %s. El valor ingresado puede ser demasiado largo o contener datos no válidos."
 
-#: wp-includes/class-wpdb.php:2237
+#: wp-includes/class-wpdb.php:2252
 msgid "WordPress database error: Could not perform query because it contains invalid data."
 msgstr "Error en la base de datos de WordPress: no se pudo realizar la consulta porque contiene datos no válidos."
 
@@ -6754,8 +6772,8 @@ msgid "Support"
 msgstr "Asistencia"
 
 #. translators: Localized Support reference.
-#: wp-includes/admin-bar.php:213 wp-includes/class-wpdb.php:1224
-#: wp-includes/class-wpdb.php:2009 wp-includes/class-wpdb.php:2169
+#: wp-includes/admin-bar.php:213 wp-includes/class-wpdb.php:1239
+#: wp-includes/class-wpdb.php:2024 wp-includes/class-wpdb.php:2184
 #: wp-includes/customize/class-wp-customize-themes-section.php:90
 #: wp-includes/load.php:191
 #: wp-includes/rest-api/endpoints/class-wp-rest-pattern-directory-controller.php:150
@@ -7962,7 +7980,7 @@ msgstr "%s ya está personalizando este grupo de cambios. Esperá hasta que term
 msgid "Update anyway, even though it might break your site?"
 msgstr "¿Querés actualizar de todos modos, aunque pueda romper tu sitio?"
 
-#: wp-includes/class-wpdb.php:1667
+#: wp-includes/class-wpdb.php:1682
 msgid "The query only expected one placeholder, but an array of multiple placeholders was sent."
 msgstr "La consulta solo esperaba un marcador de posición pero se envió un array de varios marcadores de posición."
 
@@ -8037,12 +8055,12 @@ msgid "%s has taken over and is currently customizing."
 msgstr "%s ha tomado posesión y está personalizando en este momento."
 
 #: wp-includes/class-wp-customize-manager.php:4326
-#: wp-includes/js/dist/editor.js:7566 wp-admin/includes/post.php:1891
+#: wp-includes/js/dist/editor.js:7566 wp-admin/includes/post.php:1878
 msgid "Take over"
 msgstr "Tomar posesión"
 
 #: wp-includes/class-wp-customize-manager.php:4322 wp-admin/comment.php:79
-#: wp-admin/comment.php:291 wp-admin/includes/post.php:1808
+#: wp-admin/comment.php:291 wp-admin/includes/post.php:1795
 #: wp-admin/plugin-editor.php:362 wp-admin/theme-editor.php:416
 msgid "Go back"
 msgstr "Volver"
@@ -8145,12 +8163,12 @@ msgid "%1$s &lsaquo; %2$s &#8212; WordPress"
 msgstr "%1$s &lsaquo; %2$s &#8212; WordPress"
 
 #. translators: 1: Number of placeholders, 2: Number of arguments passed.
-#: wp-includes/class-wpdb.php:1683
+#: wp-includes/class-wpdb.php:1698
 msgid "The query does not contain the correct number of placeholders (%1$d) for the number of arguments passed (%2$d)."
 msgstr "La consulta no contiene el número correcto de marcadores (%1$d) para el número de argumentos pasados ​​(%2$d)."
 
 #. translators: %s: Value type.
-#: wp-includes/class-wpdb.php:1727
+#: wp-includes/class-wpdb.php:1742
 msgid "Unsupported value type (%s)."
 msgstr "Tipo de valor no compatible (%s)."
 
@@ -11471,7 +11489,7 @@ msgstr "Hoy"
 msgid "Edit Menu"
 msgstr "Editar menú"
 
-#: wp-includes/class-wpdb.php:2276
+#: wp-includes/class-wpdb.php:2291
 msgid "Unable to retrieve the error message from MySQL"
 msgstr "No ha sido posible recuperar el mensaje de error desde MySQL"
 
@@ -12018,58 +12036,58 @@ msgstr "Misión completa. El mensaje %s ha sido borrado. "
 msgid "Author:"
 msgstr "Autor:"
 
-#: wp-includes/class-wpdb.php:2153
+#: wp-includes/class-wpdb.php:2168
 msgid "Error reconnecting to the database"
 msgstr "Error al volver a conectar con la base de datos"
 
-#: wp-includes/class-wpdb.php:2163
+#: wp-includes/class-wpdb.php:2178
 msgid "Are you sure the database server is not under particularly heavy load?"
 msgstr "¿Estás seguro de que el servidor de base de datos no está sobrecargado?"
 
-#: wp-includes/class-wpdb.php:2003 wp-includes/class-wpdb.php:2162
+#: wp-includes/class-wpdb.php:2018 wp-includes/class-wpdb.php:2177
 msgid "Are you sure the database server is running?"
 msgstr "¿Estás seguro de que el servidor de base de datos se encuentra funcionando?"
 
-#: wp-includes/class-wpdb.php:2002
+#: wp-includes/class-wpdb.php:2017
 msgid "Are you sure you have typed the correct hostname?"
 msgstr "¿Estás seguro de haber ingresado el nombre de host correcto?"
 
 #. translators: %s: Database host.
-#: wp-includes/class-wpdb.php:2157
+#: wp-includes/class-wpdb.php:2172
 msgid "This means that the contact with the database server at %s was lost. This could mean your host&#8217;s database server is down."
 msgstr "Esto significa que se perdió el contacto con el servidor de la base de datos en %s. Esto podría significar que el servidor de la base de datos de tu host está caído."
 
 #. translators: %s: Support forums URL.
-#: wp-includes/class-wpdb.php:2008 wp-includes/class-wpdb.php:2168
+#: wp-includes/class-wpdb.php:2023 wp-includes/class-wpdb.php:2183
 #: wp-includes/load.php:190
 msgid "If you are unsure what these terms mean you should probably contact your host. If you still need help you can always visit the <a href=\"%s\">WordPress support forums</a>."
 msgstr "Si no estás seguro de qué significan estos términos deberías contactar con tu servidor. Si todavía necesitas ayuda, siempre podés visitar los <a href=\"%s\">foros de soporte de WordPress</a>."
 
-#: wp-includes/class-wpdb.php:2001
+#: wp-includes/class-wpdb.php:2016
 msgid "Are you sure you have the correct username and password?"
 msgstr "¿Estás seguro de que tenés el nombre de usuario y la contraseña correctos?"
 
 #. translators: 1: wp-config.php, 2: Database host.
-#: wp-includes/class-wpdb.php:1995
+#: wp-includes/class-wpdb.php:2010
 msgid "This either means that the username and password information in your %1$s file is incorrect or that contact with the database server at %2$s could not be established. This could mean your host&#8217;s database server is down."
 msgstr "Esto significa que la información del nombre de usuario y contraseña en tu archivo %1$s no es correctam, o que no se ha podido establecer contacto con el servidor de la base de datos en %2$s. Esto podría significar que el servidor de la base de datos de tu alojamiento está caído."
 
 #. translators: %s: Support forums URL.
-#: wp-includes/class-wpdb.php:1223
+#: wp-includes/class-wpdb.php:1238
 msgid "If you do not know how to set up a database you should <strong>contact your host</strong>. If all else fails you may find help at the <a href=\"%s\">WordPress support forums</a>."
 msgstr "Si no sabés cómo configurar una base de datos, deberías <strong>contactar con tu alojamiento</strong>. Si todo lo demás falla, podés encontrar ayuda en los <a href=\"%s\">foros de soporte de WordPress</a>."
 
-#: wp-includes/class-wpdb.php:1204
+#: wp-includes/class-wpdb.php:1219
 msgid "Are you sure it exists?"
 msgstr "¿Estás seguro de que existe?"
 
 #. translators: %s: Database name.
-#: wp-includes/class-wpdb.php:1215
+#: wp-includes/class-wpdb.php:1230
 msgid "On some systems the name of your database is prefixed with your username, so it would be like <code>username_%1$s</code>. Could that be the problem?"
 msgstr "En algunos sistemas el nombre de tu base de datos tiene el prefijo de tu nombre de usuario, por lo que sería algo como <code>nombreusuario_%1$s</code>. ¿Podría ser ese el problema?"
 
 #. translators: 1: Database user, 2: Database name.
-#: wp-includes/class-wpdb.php:1208
+#: wp-includes/class-wpdb.php:1223
 msgid "Does the user %1$s have permission to use the %2$s database?"
 msgstr "¿Tiene el usuario %1$s permisos para usar la base de datos %2$s?"
 
@@ -12562,7 +12580,7 @@ msgstr "Agregar al menú: %1$s (%2$s)"
 msgid "When starting a new paragraph with one of these formatting shortcuts followed by a space, the formatting will be applied automatically. Press Backspace or Escape to undo."
 msgstr "Cuando empiezas un párrafo nuevo con uno de estos atajos de formato, seguidos por un espacio, el formato se aplica automáticamente. Pulsa la tecla Retroceso o Escape para deshacer. "
 
-#: wp-includes/class-wpdb.php:1820 wp-includes/class-wpdb.php:1837
+#: wp-includes/class-wpdb.php:1835 wp-includes/class-wpdb.php:1852
 msgid "WordPress database error:"
 msgstr "Error en la base de datos de WordPress:"
 
@@ -13352,7 +13370,7 @@ msgstr "Un término con el nombre y el slug ya existe en esta taxonomía."
 
 #. translators: %s: Database access abstraction class, usually wpdb or a class
 #. extending wpdb.
-#: wp-includes/class-wpdb.php:1274
+#: wp-includes/class-wpdb.php:1289
 msgid "%s must set a database connection for use with escaping."
 msgstr "%s debe definir una conexión de base de datos para usárla con el escapado."
 
@@ -14223,7 +14241,7 @@ msgid "Drag and drop to reorder tracks."
 msgstr "Arrastrar y soltar para reordenar pistas."
 
 #. translators: %s: wpdb::prepare()
-#: wp-includes/class-wpdb.php:1460
+#: wp-includes/class-wpdb.php:1475
 msgid "The query argument of %s must have a placeholder."
 msgstr "El argumento de la consulta %s debe tener un marcador de posición."
 
@@ -15805,14 +15823,14 @@ msgstr "Alineación de imagen por defecto"
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:489
 #: wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php:804
 #: wp-admin/includes/ajax-actions.php:2066 wp-admin/includes/media.php:3810
-#: wp-admin/includes/post.php:288 wp-admin/includes/post.php:2073
-#: wp-admin/includes/post.php:2077
+#: wp-admin/includes/post.php:288 wp-admin/includes/post.php:2060
+#: wp-admin/includes/post.php:2064
 msgid "Sorry, you are not allowed to edit this post."
 msgstr "Lo siento, no tenés permisos para editar esta entrada."
 
 #: wp-includes/post.php:5289 wp-admin/includes/ajax-actions.php:124
 #: wp-admin/includes/meta-boxes.php:583 wp-admin/includes/post.php:576
-#: wp-admin/includes/post.php:2251 wp-admin/js/inline-edit-post.js:400
+#: wp-admin/includes/post.php:2238 wp-admin/js/inline-edit-post.js:358
 #: wp-admin/js/tags-box.js:9 wp-admin/js/tags-suggest.js:12
 msgctxt "tag delimiter"
 msgid ","
@@ -16033,7 +16051,7 @@ msgstr "&hellip;"
 msgid "Database Error"
 msgstr "Error de la base de datos"
 
-#: wp-includes/class-wpdb.php:1991 wp-includes/functions.php:5412
+#: wp-includes/class-wpdb.php:2006 wp-includes/functions.php:5412
 #: wp-includes/ms-load.php:475
 msgid "Error establishing a database connection"
 msgstr "Error al establecer una conexión con la base de datos"
@@ -18526,7 +18544,7 @@ msgstr "<strong>Error</strong>: El campo de la contraseña está vacío."
 
 #. translators: 1: WordPress version number, 2: Minimum required MySQL version
 #. number.
-#: wp-includes/class-wpdb.php:3989
+#: wp-includes/class-wpdb.php:4004
 msgid "<strong>Error:</strong> WordPress %1$s requires MySQL %2$s or higher"
 msgstr "<strong>Error</strong>: WordPress %1$s necesita MySQL %2$s o superior."
 
@@ -19223,7 +19241,7 @@ msgstr "Comentario"
 #: wp-admin/includes/class-wp-users-list-table.php:472
 #: wp-admin/includes/dashboard.php:758 wp-admin/includes/meta-boxes.php:135
 #: wp-admin/includes/meta-boxes.php:197 wp-admin/includes/meta-boxes.php:292
-#: wp-admin/includes/post.php:1595
+#: wp-admin/includes/post.php:1582
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:740
 #: wp-admin/includes/class-wp-ms-users-list-table.php:406
 #: wp-admin/includes/class-wp-ms-users-list-table.php:527
@@ -19445,7 +19463,7 @@ msgstr "Ninguna"
 #: wp-admin/includes/class-custom-image-header.php:551
 #: wp-admin/includes/class-wp-posts-list-table.php:1542
 #: wp-admin/includes/class-wp-theme-install-list-table.php:346
-#: wp-admin/includes/meta-boxes.php:73 wp-admin/includes/post.php:1884
+#: wp-admin/includes/meta-boxes.php:73 wp-admin/includes/post.php:1871
 #: wp-admin/theme-install.php:426 wp-admin/theme-install.php:439
 #: wp-admin/theme-install.php:449 wp-admin/theme-install.php:456
 #: wp-admin/theme-install.php:609
@@ -19820,7 +19838,7 @@ msgstr "Nueva entrada"
 #: wp-includes/js/dist/edit-site.js:20449 wp-includes/js/dist/editor.js:10278
 #: wp-admin/includes/ajax-actions.php:2255 wp-admin/includes/media.php:3331
 #: wp-admin/includes/revision.php:61 wp-admin/includes/revision.php:64
-#: wp-admin/includes/template.php:2097 wp-admin/js/inline-edit-post.js:204
+#: wp-admin/includes/template.php:2097 wp-admin/js/inline-edit-post.js:201
 msgid "(no title)"
 msgstr "(sin título)"
 
