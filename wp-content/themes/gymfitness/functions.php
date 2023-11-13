@@ -60,3 +60,21 @@ function gymfitness_widgets(){
     ) );
 }
 add_action('widgets_init', 'gymfitness_widgets');
+
+
+// crear Shortcode
+function gimfitness_ubicacion_shortcode(){
+    ?>
+    <div class="mapa">
+        <?php
+            if (is_page('contacto')) {
+                the_field('ubicacion');
+            }
+        ?>
+    </div>
+
+    <h2 class="text-center text-primary">Formulario de contacto</h2>
+    <?php
+    echo do_shortcode('[contact-form-7 id="d287930" title="intentoEnEspañol"]');
+}
+add_shortcode('gimfitness_ubicacion', 'gimfitness_ubicacion_shortcode');
