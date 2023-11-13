@@ -75,6 +75,6 @@ function gimfitness_ubicacion_shortcode(){
 
     <h2 class="text-center text-primary">Formulario de contacto</h2>
     <?php
-    echo do_shortcode('[contact-form-7 id="d287930" title="intentoEnEspañol"]');
+    echo do_shortcode('[contact-form-7 id="2b25fd6" title="Contact Form 2 - Español Nativo"]');
 }
 add_shortcode('gimfitness_ubicacion', 'gimfitness_ubicacion_shortcode');
