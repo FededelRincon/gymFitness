@@ -435,6 +435,16 @@ hr{
     border: 1px solid var(--gris-claro);
     padding: 1rem;
 }
+.wpcf7-form .wpcf7-form-control:focus {
+    border-color: var(--primario) !important;
+}
+.wpcf7-form input:focus {   /*esto es para borrar las lineas negras q pone el navegador por defecto*/
+    outline: none;
+}
+.wpcf7-form textarea:focus {
+    outline: none;
+}
+
 .wpcf7-form .wpcf7-submit {
     background-color: var(--primario);
     font-size: 2rem;
