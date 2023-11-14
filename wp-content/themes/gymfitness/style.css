@@ -480,4 +480,9 @@ div.wpcf7-response-output {
     margin-bottom: 5rem;
 }
 
-/* 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 */
+
+/* Pagina Inicio */
+.bienvenida p {
+    max-width: 80rem;
+    margin: 0 auto;
+}
