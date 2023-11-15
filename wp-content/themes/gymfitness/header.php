@@ -6,7 +6,7 @@
         <!-- <title>Document</title> -->
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class() ?> >
     <header class="header">
         <div class="contenedor barra-navegacion">
             <div class="logo">
@@ -25,4 +25,11 @@
                 wp_nav_menu($args);
             ?>
         </div>
+        <?php if (is_front_page()) { ?>
+            <div class="tagline text-center contenedor">
+                <h1><?php the_field('hero_heading') ?></h1>
+                <p> <?php the_field('hero_texto') ?> </p>
+            </div>
+
+        <?php } ?>
     </header>

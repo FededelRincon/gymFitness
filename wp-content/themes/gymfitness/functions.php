@@ -82,3 +82,31 @@ function gimfitness_ubicacion_shortcode(){
     echo do_shortcode('[contact-form-7 id="2b25fd6" title="Contact Form 2 - Español Nativo"]');
 }
 add_shortcode('gimfitness_ubicacion', 'gimfitness_ubicacion_shortcode');
+
+// imagenes dinamicas para BackGround
+function gymfitness_hero_imagen(){
+    // obtener el id de la pagina de inicio
+    $front_id = get_option('page_on_front');
+
+    // obtener la imagen
+    $id_imagen = get_field('hero_imagen', $front_id);
+
+    // obtener la ruta de la imagen
+    $imagen = wp_get_attachment_image_src($id_imagen, 'full')[0];
+
+    // crear css
+    wp_register_style('custom', false); //la registra
+    wp_enqueue_style('custom'); // y la cargamos igual
+
+    $imagen_destacada_css = "
+        body.home .header{
+            background-image: linear-gradient(rgb( 0 0 0 / .50),rgb( 0 0 0 / .75) ), url($imagen);
+        }
+    ";
+
+    // inyectar css
+    wp_add_inline_style('custom', $imagen_destacada_css);
+
+}
+add_action('init', 'gymfitness_hero_imagen');
+
