@@ -95,7 +95,7 @@ function gymfitness_instructores() {
 
 function gymfitness_testimoniales(){
     ?>
-    <ul class="listado-testimoniales">
+    <ul class="listado-testimoniales swiper-wrapper">
         <?php
             $args = array(
                 'post_type' => 'testimoniales',
@@ -108,7 +108,7 @@ function gymfitness_testimoniales(){
             $testimoniales->the_post();
         ?>
 
-            <li class="testimonial text-center">
+            <li class="testimonial text-center swiper-slide">
                 <blockquote>
                     <?php the_content() ?>
 

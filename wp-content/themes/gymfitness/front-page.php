@@ -36,7 +36,7 @@
     <section class="testimoniales">
         <h2 class="text-center text-blanco">Testimoniales</h2>
 
-        <div class="contenedor-testimoniales">
+        <div class="contenedor-testimoniales swiper">
             <?php gymfitness_testimoniales(); ?>
         </div>
     </section>
