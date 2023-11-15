@@ -33,4 +33,18 @@ function gymWordPress(){
     });
 }
 
-document.addEventListener('DOMContentLoaded', gymWordPress)
+document.addEventListener('DOMContentLoaded', gymWordPress);
+
+
+window.onscroll = function () {
+    const scroll = window.scrollY;
+
+    const barraNav = document.querySelector('.barra-navegacion');
+
+
+    if (scroll > 200) {
+        barraNav.classList.add('fixed-top');
+    } else {
+        barraNav.classList.remove('fixed-top');
+    }
+}
