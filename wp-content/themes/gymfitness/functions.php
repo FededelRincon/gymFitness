@@ -36,8 +36,9 @@ function gymfitness_scripts_styles(){
     wp_enqueue_style( 'style', get_stylesheet_uri(), array('lightboxcss'), '1.0.0' );
 
     // Archivos JS
-    wp_enqueue_script('lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.4', true);
-    wp_enqueue_script('swipper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '11.0.4', true);
+    wp_enqueue_script('lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.4', true); //para mostrar la transicion de fotos
+    wp_enqueue_script('swipper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '11.0.4', true);    // para animar el slider de comentarios
+    wp_enqueue_script('anime', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js', array(), '2.0.2', true);
     wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('swipper-js'), '1.0.0', true);
 }
 

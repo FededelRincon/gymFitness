@@ -708,3 +708,14 @@ div.wpcf7-response-output {
     font-weight: 700;
     color: var(--primario);
 }
+
+/* Animacion de texto en pantalla principal */
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+  
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
