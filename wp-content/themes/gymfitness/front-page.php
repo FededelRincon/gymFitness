@@ -32,6 +32,15 @@
         <?php gymfitness_instructores() ?>
     </section>
 
+    <!-- seccion de testimoniales -->
+    <section class="testimoniales">
+        <h2 class="text-center text-blanco">Testimoniales</h2>
+
+        <div class="contenedor-testimoniales">
+            <?php gymfitness_testimoniales(); ?>
+        </div>
+    </section>
+
 <?php
     get_footer();
 ?>

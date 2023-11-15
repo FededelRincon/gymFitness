@@ -92,3 +92,39 @@ function gymfitness_instructores() {
 
     <?php
 }
+
+function gymfitness_testimoniales(){
+    ?>
+    <ul class="listado-testimoniales">
+        <?php
+            $args = array(
+                'post_type' => 'testimoniales',
+                // 'posts_per_page' => $3
+        );
+
+        $testimoniales = new WP_Query($args);
+
+        while ($testimoniales->have_posts()) {
+            $testimoniales->the_post();
+        ?>
+
+            <li class="testimonial text-center">
+                <blockquote>
+                    <?php the_content() ?>
+
+                    <footer class="testimonial-footer">
+                        <?php the_post_thumbnail('thumbnail') ?>
+                        <p>
+                            <?php the_title() ?>
+                        </p>
+                    </footer>
+                </blockquote>
+            </li>
+
+        <?php
+        }
+            wp_reset_postdata();
+        ?>
+    </ul>
+    <?php
+}
