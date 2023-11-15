@@ -1,3 +1,4 @@
+// cosas para cuando este cargado todo el DOM
 function gymWordPress(){
     // animacion del swipper
     if ( document.querySelector('.swiper') ) {
@@ -35,6 +36,12 @@ function gymWordPress(){
             delay: 1000
         });
     }
+
+    const hamburger = document.querySelector('.hamburger-menu svg')
+    hamburger.addEventListener('click', function () {
+        const menuPrincipal = document.querySelector('.contenedor-menu');
+        menuPrincipal.classList.toggle('mostrar');
+    })
 }
 
 document.addEventListener('DOMContentLoaded', gymWordPress);

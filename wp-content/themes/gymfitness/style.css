@@ -199,6 +199,39 @@ body.home .header {
     display: none;
 } */
 
+/* desde aca copiar */
+.hamburger-menu:hover {
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+.contenedor-menu {
+    opacity: 0;
+    max-height: 0;
+    transition-delay: 100ms, 300ms;
+    transition-property: opacity, max-height;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+}
+@media (min-width: 768px) {
+    .contenedor-menu {
+        all: unset;
+    }    
+}
+.mostrar{
+    opacity: 1;
+    max-height: 35rem;
+    transition-delay: 100ms, 300ms;
+    transition-property: max-height, opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 300ms;
+}
+
+/* hasta aca copiar */
+
 @media (min-width: 768px) {
     .menu-principal{
         display: block;
