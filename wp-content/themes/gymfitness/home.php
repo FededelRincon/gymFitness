@@ -10,6 +10,10 @@
                 }
             ?>
         </ul>
+        <?php 
+            //posts_nav_link();   //anterior y siguiente
+            the_posts_pagination();
+        ?>
     </main>
 
 <?php

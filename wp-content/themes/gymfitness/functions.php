@@ -31,15 +31,23 @@ function gymfitness_scripts_styles(){
 
     // Archivos CSS
     wp_enqueue_style( 'normalize', 'https://necolas.github.io/normalize.css/8.0.1/normalize.css', array(), '8.0.1' );
-    wp_enqueue_style( 'lightboxcss', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.4');
-    wp_enqueue_style( 'swipper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array('normalize'), '11.0.4');
-    wp_enqueue_style( 'style', get_stylesheet_uri(), array('lightboxcss'), '1.0.0' );
+    if (is_page('galeria')) {
+        wp_enqueue_style( 'lightboxcss', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.4');
+    }
+    if (is_front_page()) {
+        wp_enqueue_style( 'swipper-css', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', array('normalize'), '11.0.4');
+    }
+    wp_enqueue_style( 'style', get_stylesheet_uri(), array(), '1.0.0' );
 
     // Archivos JS
-    wp_enqueue_script('lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.4', true); //para mostrar la transicion de fotos
-    wp_enqueue_script('swipper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '11.0.4', true);    // para animar el slider de comentarios
-    wp_enqueue_script('anime', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js', array(), '2.0.2', true);
-    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array('swipper-js'), '1.0.0', true);
+    if (is_page('galeria')) {
+        wp_enqueue_script('lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.4', true); //para mostrar la transicion de fotos
+    }
+    if (is_front_page()) {
+        wp_enqueue_script('swipper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', array('jquery'), '11.0.4', true);    // para animar el slider de comentarios
+        wp_enqueue_script('anime', 'https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js', array(), '2.0.2', true);
+    }
+    wp_enqueue_script('scripts', get_template_directory_uri() . '/js/scripts.js', array(), '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'gymfitness_scripts_styles');
